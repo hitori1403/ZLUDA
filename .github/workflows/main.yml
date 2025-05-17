@@ -35,7 +35,7 @@ jobs:
     - name: Build
       # https://github.com/actions/upload-artifact/issues/39
       run: |
-        cargo xtask zip --profile release-lto
+        cargo xtask --profile release-lto
         mkdir target/release-lto/zluda
         tar -xzf target/release-lto/zluda.tar.gz -C target/release-lto/zluda
     - name: Set revision hash
